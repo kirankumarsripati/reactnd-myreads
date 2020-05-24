@@ -28,7 +28,12 @@ const BooksApp = () => {
       <Route exact path="/" render={() => (
         <ListBooks books={books} onUpdateBook={changeBookStatus} />
       )} />
-      <Route path="/search" component={SearchBooks} />
+      <Route path="/search" render={() => (
+        <SearchBooks
+          availableBooks={books}
+          onUpdateBook={changeBookStatus}
+        />
+      )} />
     </div>
   )
 }

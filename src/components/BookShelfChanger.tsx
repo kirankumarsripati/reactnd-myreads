@@ -9,7 +9,7 @@ interface BookShelfChangerProps {
 const BookShelfChanger: React.FC<BookShelfChangerProps> = ({ book, onUpdateBook }) => {
   return (
     <div className="book-shelf-changer">
-      <select value={book.shelf} onChange={(evt) => {
+      <select value={book.shelf || 'none'} onChange={(evt) => {
         onUpdateBook(book, evt.target.value.toString())
       }}>
         <option value="move" disabled>Move to...</option>
