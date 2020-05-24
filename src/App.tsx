@@ -15,10 +15,18 @@ const BooksApp = () => {
     })
   }, [])
 
+  const changeBookStatus = (book: IBook, shelf: string): void => {
+    BooksAPI.update(book, shelf)
+      .then(() => {
+        book.shelf = shelf
+        setBooks(books.filter(b => b.id !== book.id).concat([book]))
+      })
+  }
+
   return (
     <div className="app">
       <Route exact path="/" render={() => (
-        <ListBooks books={books} />
+        <ListBooks books={books} onUpdateBook={changeBookStatus} />
       )} />
       <Route path="/search" component={SearchBooks} />
     </div>

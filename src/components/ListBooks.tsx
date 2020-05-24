@@ -6,9 +6,10 @@ import { Shelves } from '../models/shelf'
 
 interface ListBooksProps {
   books: IBook[];
+  onUpdateBook: Function;
 }
 
-const ListBooks: React.FC<ListBooksProps> = ({ books }) => {
+const ListBooks: React.FC<ListBooksProps> = ({ books, onUpdateBook }) => {
   return (
     <div className="list-books">
       <div className="list-books-title">
@@ -22,6 +23,7 @@ const ListBooks: React.FC<ListBooksProps> = ({ books }) => {
               id={shelf.id}
               title={shelf.name}
               books={books}
+              onUpdateBook={onUpdateBook}
             />
           ))}
         </div>

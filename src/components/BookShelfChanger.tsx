@@ -1,9 +1,17 @@
 import React from 'react'
+import { IBook } from '../models/book'
 
-const BookShelfChanger = () => {
+interface BookShelfChangerProps {
+  book: IBook;
+  onUpdateBook: Function;
+}
+
+const BookShelfChanger: React.FC<BookShelfChangerProps> = ({ book, onUpdateBook }) => {
   return (
     <div className="book-shelf-changer">
-      <select>
+      <select value={book.shelf} onChange={(evt) => {
+        onUpdateBook(book, evt.target.value.toString())
+      }}>
         <option value="move" disabled>Move to...</option>
         <option value="currentlyReading">Currently Reading</option>
         <option value="wantToRead">Want to Read</option>
