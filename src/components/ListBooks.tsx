@@ -1,8 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import BookShelf from './BookShelf'
+import { IBook } from '../models/book'
 
-const ListBooks = () => {
+interface ListBooksProps {
+  books: IBook[];
+}
+
+const ListBooks: React.FC<ListBooksProps> = ({ books }) => {
   return (
     <div className="list-books">
       <div className="list-books-title">
@@ -10,9 +15,9 @@ const ListBooks = () => {
       </div>
       <div className="list-books-content">
         <div>
-          <BookShelf title="Currently Reading" />
-          <BookShelf title="Want to Read" />
-          <BookShelf title="Read" />
+          <BookShelf title="Currently Reading" books={books} />
+          <BookShelf title="Want to Read" books={books} />
+          <BookShelf title="Read" books={books} />
         </div>
       </div>
       <div className="open-search">
