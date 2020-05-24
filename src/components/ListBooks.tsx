@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import BookShelf from './BookShelf'
 import { IBook } from '../models/book'
+import { Shelves } from '../models/shelf'
 
 interface ListBooksProps {
   books: IBook[];
@@ -15,9 +16,14 @@ const ListBooks: React.FC<ListBooksProps> = ({ books }) => {
       </div>
       <div className="list-books-content">
         <div>
-          <BookShelf title="Currently Reading" books={books} />
-          <BookShelf title="Want to Read" books={books} />
-          <BookShelf title="Read" books={books} />
+          {Shelves.map((shelf) => (
+            <BookShelf
+              key={shelf.id}
+              id={shelf.id}
+              title={shelf.name}
+              books={books}
+            />
+          ))}
         </div>
       </div>
       <div className="open-search">
