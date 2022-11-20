@@ -2,7 +2,7 @@
 The final assessment project for Udacity's React Fundamentals course.
 
 ## Installation
-1. `npm install` to install all dependencies
+1. `yarn` to install all dependencies
 1. `npm start` to build and start
 
 ## Backend Server
