@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/reactnd-myreads/static/css/main.76bab4d8.chunk.css",
+    "main.js": "/reactnd-myreads/static/js/main.63479625.chunk.js",
+    "main.js.map": "/reactnd-myreads/static/js/main.63479625.chunk.js.map",
+    "runtime-main.js": "/reactnd-myreads/static/js/runtime-main.bdcdc55e.js",
+    "runtime-main.js.map": "/reactnd-myreads/static/js/runtime-main.bdcdc55e.js.map",
+    "static/js/2.025e45f5.chunk.js": "/reactnd-myreads/static/js/2.025e45f5.chunk.js",
+    "static/js/2.025e45f5.chunk.js.map": "/reactnd-myreads/static/js/2.025e45f5.chunk.js.map",
+    "index.html": "/reactnd-myreads/index.html",
+    "precache-manifest.3b97f9e625f44dfe369a002fd81cf559.js": "/reactnd-myreads/precache-manifest.3b97f9e625f44dfe369a002fd81cf559.js",
+    "service-worker.js": "/reactnd-myreads/service-worker.js",
+    "static/css/main.76bab4d8.chunk.css.map": "/reactnd-myreads/static/css/main.76bab4d8.chunk.css.map",
+    "static/js/2.025e45f5.chunk.js.LICENSE.txt": "/reactnd-myreads/static/js/2.025e45f5.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/reactnd-myreads/static/media/arrow-drop-down.78c6f53b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bdcdc55e.js",
+    "static/js/2.025e45f5.chunk.js",
+    "static/css/main.76bab4d8.chunk.css",
+    "static/js/main.63479625.chunk.js"
+  ]
+}
